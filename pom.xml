@@ -13,7 +13,7 @@
     <artifactId>kafka-schema-registry-parent</artifactId>
     <packaging>pom</packaging>
     <name>kafka-schema-registry-parent</name>
-    <version>6.2.1</version>
+    <version>6.2.1.0</version>
     <organization>
         <name>Confluent, Inc.</name>
         <url>http://confluent.io</url>
@@ -422,6 +422,15 @@
                 </executions>
             </plugin>
         </plugins>
-
     </build>
+    <distributionManagement>
+        <repository>
+            <id>${maven.release.repository.id}</id>
+            <url>${maven.repository.release.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${maven.snapshot.repository.id}</id>
+            <url>${maven.repository.snapshot.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
